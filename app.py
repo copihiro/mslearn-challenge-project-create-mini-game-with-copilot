@@ -37,5 +37,15 @@ else:
     print("Invalid input! You have not entered rock, paper, or scissors, try again.")
     exit()
 
-# End of the game
-print("Thanks for playing Rock, Paper, Scissors Game!")
+# Ask user to play again
+play_again = input("Do you want to play again? (yes/no): ").lower()
+if play_again != "yes":
+    # End of the game
+    print("Thanks for playing Rock, Paper, Scissors Game!")
+    exit()
+else:
+    # Play again
+    print("Let's play again!")
+    print()
+    # Run the game again
+    exec(open("app.py").read())
